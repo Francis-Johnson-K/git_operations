@@ -1,0 +1,69 @@
+5. Stashing Changes
+Limitation: Git Gui does not natively support stashing. For the scenario where you need to switch branches mid-work:
+Use the command line (git stash) to save changes.
+Switch branches in Git Gui ("Branch > Checkout").
+Apply stash later via command line (git stash pop).
+6. Resolving Merge Conflicts
+Process:
+Start a merge (e.g., "Merge > Local Merge").
+If conflicts occur, Git Gui highlights affected files and opens a conflict resolution window.
+Manually edit the file to resolve conflicts (e.g., choose between versions or combine changes).
+Stage the resolved file by right-clicking and selecting "Stage to Commit."
+Click "Commit" to finalize the merge.
+7. Reverting Commits
+Steps:
+Go to "Repository > Visualize History" to view commits.
+Right-click the commit to revert, select "Revert this commit."
+Resolve conflicts if prompted, stage, and commit the revert.
+8. Resetting Changes
+Limitation: Git Gui has limited reset support. For a hard reset:
+Use the command line (git reset --hard <commit-hash>).
+In Git Gui, discard changes via "Edit > Discard Changes" for individual files.
+9. Cherry-Picking
+Limitation: Git Gui does not support cherry-picking. Use the command line (git cherry-pick <commit-hash>) after identifying the commit in "Visualize History."
+10. Rebasing
+Limitation: Git Gui does not support rebasing. Use the command line (git rebase main) for this operation.
+11. Working with Remote Repositories
+Add a Remote: Not directly supported. Use the command line (git remote add origin <url>).
+Push/Pull: Use "Remote > Push" or "Fetch from > origin" followed by "Merge."
+View Remotes: Go to "Remote > Configure Remotes" to see configured remotes.
+12. Tagging
+Create a Tag: Go to "Create > Create Tag," enter the tag name (e.g., v1.0.0), and click "Create."
+Push Tags: Use the command line (git push origin v1.0.0).
+List Tags: View in "Create > Manage Tags."
+13. Viewing History
+View Commit History: Go to "Repository > Visualize History" for a graphical log.
+View Changes: Right-click a commit in "Visualize History," select "Diff this > to Parent" to see changes.
+14. Undoing Mistakes
+Amend Last Commit: After staging new changes, click "Commit > Amend Last Commit," enter a new message, and commit.
+Unstage Files: Right-click staged files and select "Unstage from Commit."
+Discard Local Changes: Right-click unstaged files and select "Discard Changes."
+15. Advanced: Interactive Rebase
+Limitation: Not supported in Git Gui. Use the command line (git rebase -i HEAD~3).
+16. Best Practices
+Commit small, logical changes with clear messages in Git Gui.
+Use branches via the "Branch" menu for parallel work.
+Pull regularly using "Remote > Fetch" and "Merge."
+Avoid rewriting history (e.g., resets) in shared repositories.
+17. Example Workflow
+Scenario: Collaborative Feature Development
+Clone and Branch:
+Use "Clone Existing Repository" dialog to clone.
+Go to "Branch > Create," name it feature-login, and checkout.
+Work and Commit:
+Edit files, stage via right-click, and commit with a message (e.g., "Implement login form").
+Stash Partial Work:
+Use command line (git stash) to save, switch branches in Git Gui, then apply later (git stash pop).
+Push Branch:
+Go to "Remote > Push," select feature-login, and push.
+Create Pull Request: Use the Git hosting service (e.g., GitHub) interface.
+Resolve Conflicts: Merge in Git Gui, resolve conflicts manually, and commit.
+Cherry-Pick Hotfix: Use command line (git cherry-pick <commit-hash>).
+Tag Release: Create tag via "Create > Create Tag" (e.g., v1.0.0).
+Limitations of Git Gui
+Lacks advanced features like rebasing, cherry-picking, and stashing.
+Best for basic workflows; complex operations may require command-line or other GUIs (e.g., GitKraken, Sourcetree).
+Relies on command line for initial setup and some remote operations.
+For a complete Git experience, complement Git Gui with command-line knowledge or switch to a more feature-rich GUI tool as needed.
+
+Let me know if you'd like me to expand on any section or assist with a specific task using Git Gui!
