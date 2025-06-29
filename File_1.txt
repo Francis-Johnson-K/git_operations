@@ -9,7 +9,7 @@ Installation: Git Gui comes with Git. Install Git from git-scm.com, and Git Gui 
 Launch: Open Git Gui from your system (e.g., via terminal with git gui or from the Start menu on Windows).
 Configuration: Set your name and email via the command line first (e.g., git config --global user.name "Your Name"), as Git Gui does not handle initial configuration directly.
 2. Initializing a Repository
-Change 1 introduced from git_operations
+Change 1 introduced from demo_repo new
 Clone an Existing Repository
 Steps in Git Gui:
 Launch Git Gui.
